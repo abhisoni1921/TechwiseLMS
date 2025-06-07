@@ -31,7 +31,7 @@ A modern, responsive Learning Management System built with React, TypeScript, an
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18 with TypeScript
+- **Frontend Framework**: React 18 with JavaScript
 - **Styling**: Tailwind CSS
 - **Routing**: React Router DOM v6
 - **State Management**: React Context API
