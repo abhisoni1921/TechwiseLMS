@@ -1,31 +1,35 @@
-import React, { useState } from 'react';
-import { Plus, Search, Edit2, Trash2, UserPlus } from 'lucide-react';
-import { DataTable } from '../../components/data/DataTable';
-import { Button } from '../../components/ui/Button';
-import { Input } from '../../components/ui/Input';
-import { Modal, ConfirmModal } from '../../components/ui/Modal';
-import { mockUsers } from '../../utils/mockData';
-import { toast } from 'react-toastify';
+import React, { useState } from "react";
+import { Plus, Search, Edit2, Trash2, UserPlus } from "lucide-react";
+import { DataTable } from "../../components/data/DataTable";
+import { Button } from "../../components/ui/Button";
+import { Input } from "../../components/ui/Input";
+import { Modal, ConfirmModal } from "../../components/ui/Modal";
+import { mockUsers } from "../../utils/mockData";
+import { toast } from "react-toastify";
 
 export const ManageUsers = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
 
   const handleDelete = () => {
-    toast.success('User deleted successfully');
+    toast.success("User deleted successfully");
     setIsDeleteModalOpen(false);
   };
 
-  const students = mockUsers.filter(user => user.role === 'student');
+  const students = mockUsers.filter((user) => user.role === "student");
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Manage Users</h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">Add, edit, and manage student accounts</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Manage Users
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-1">
+            Add, edit, and manage student accounts
+          </p>
         </div>
         <Button variant="primary" onClick={() => setIsAddModalOpen(true)}>
           <UserPlus size={18} className="mr-2" />
@@ -46,12 +50,16 @@ export const ManageUsers = () => {
         <DataTable
           columns={[
             {
-              header: 'Name',
+              header: "Name",
               accessor: (user) => (
                 <div className="flex items-center">
                   <div className="h-8 w-8 rounded-full bg-gray-200 overflow-hidden mr-3">
                     {user.avatar ? (
-                      <img src={user.avatar} alt={user.name} className="h-full w-full object-cover" />
+                      <img
+                        src={user.avatar}
+                        alt={user.name}
+                        className="h-full w-full object-cover"
+                      />
                     ) : (
                       <div className="h-full w-full flex items-center justify-center bg-blue-500 text-white">
                         {user.name.charAt(0).toUpperCase()}
@@ -60,11 +68,11 @@ export const ManageUsers = () => {
                   </div>
                   <span>{user.name}</span>
                 </div>
-              )
+              ),
             },
-            { header: 'Email', accessor: 'email' },
+            { header: "Email", accessor: "email" },
             {
-              header: 'Actions',
+              header: "Actions",
               accessor: (user) => (
                 <div className="flex justify-end space-x-2">
                   <Button variant="outline" size="sm">
@@ -84,12 +92,13 @@ export const ManageUsers = () => {
                   </Button>
                 </div>
               ),
-              align: 'right'
-            }
+              align: "right",
+            },
           ]}
-          data={students.filter(user =>
-            user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            user.email.toLowerCase().includes(searchQuery.toLowerCase())
+          data={students.filter(
+            (user) =>
+              user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              user.email.toLowerCase().includes(searchQuery.toLowerCase())
           )}
           keyExtractor={(user) => user.id}
         />
