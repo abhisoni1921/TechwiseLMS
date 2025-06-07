@@ -120,6 +120,7 @@ function App() {
             <Route path="forgot-password" element={<ForgotPassword />} />
           </Route>
         </Routes>
+        
       </Router>
     </AuthProvider>
   );
