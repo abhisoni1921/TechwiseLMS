@@ -18,6 +18,7 @@ import { AuthLayout } from "./components/layout/AuthLayout";
 import { Login } from "./pages/auth/Login";
 import { Register } from "./pages/auth/Register";
 import { ForgotPassword } from "./pages/auth/ForgotPassword";
+import { AssignmentSubmissions } from "./pages/admin/AssignmentSubmission";
 
 // Student Pages
 // import { StudentDashboard } from "./pages/student/Dashboard";
@@ -30,7 +31,6 @@ import { ForgotPassword } from "./pages/auth/ForgotPassword";
 // import { AdminDashboard } from "./pages/admin/Dashboard";
 // import { ManageCourses } from "./pages/admin/ManageCourses";
 // import { ManageUsers } from "./pages/admin/ManageUsers";
-// import { AssignmentSubmissions } from "./pages/admin/AssignmentSubmissions";
 // import { Reports } from "./pages/admin/Reports";
 
 // Protected Route Component
@@ -88,22 +88,6 @@ function App() {
     //         <Route path="profile" element={<StudentProfile />} />
     //       </Route>
 
-    //       {/* Admin Routes */}
-    //       <Route
-    //         path="/admin"
-    //         element={
-    //           <ProtectedRoute allowedRoles={["admin"]}>
-    //             <AppLayout />
-    //           </ProtectedRoute>
-    //         }
-    //       >
-    //         <Route path="dashboard" element={<AdminDashboard />} />
-    //         <Route path="courses" element={<ManageCourses />} />
-    //         <Route path="users" element={<ManageUsers />} />
-    //         <Route path="assignments" element={<AssignmentSubmissions />} />
-    //         <Route path="reports" element={<Reports />} />
-    //       </Route>
-
     //       {/* Default Redirects */}
     //       <Route path="/" element={<Navigate to="/auth/login" replace />} />
     //       <Route path="*" element={<Navigate to="/auth/login" replace />} />
@@ -118,6 +102,22 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="forgot-password" element={<ForgotPassword />} />
+          </Route>
+
+          {/* Admin Routes */}
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute allowedRoles={["admin"]}>
+                <AppLayout />
+              </ProtectedRoute>
+            }
+          >
+            {/* <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="courses" element={<ManageCourses />} />
+            <Route path="users" element={<ManageUsers />} /> */}
+            <Route path="assignments" element={<AssignmentSubmissions />} />
+            {/* <Route path="reports" element={<Reports />} /> */}
           </Route>
         </Routes>
       </Router>
