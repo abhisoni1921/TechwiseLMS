@@ -39,7 +39,6 @@ A modern, responsive Learning Management System built with React, TypeScript, an
 - **Icons**: Lucide React
 - **Notifications**: React Toastify
 - **Build Tool**: Vite
-- **Code Quality**: ESLint + TypeScript ESLint
 
 ## 📁 Project Structure
 
@@ -281,6 +280,6 @@ If you have any questions or need help with the project:
 
 ---
 
-**Built with ❤️ by the SkillEdge Team**
+**Built with ❤️ by the ZENITH Team**
 
 _Empowering education through technology_
