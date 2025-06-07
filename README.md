@@ -182,28 +182,6 @@ The application uses comprehensive mock data for demonstration:
 - Progress visualization
 - Quick action buttons
 
-## 🔧 Development Scripts
-
-```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Run ESLint
-npm run lint
-```
-
-## 🚀 Deployment
-
-### Build for Production
-
-```bash
-npm run build
 ```
 
 The build artifacts will be stored in the `dist/` directory.
@@ -225,15 +203,11 @@ The build artifacts will be stored in the `dist/` directory.
 
 ### Development Guidelines
 
-- Follow TypeScript best practices
+- Follow JavaScript best practices
 - Use Tailwind CSS for styling
 - Maintain component modularity
 - Write descriptive commit messages
 - Test responsive design on multiple devices
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -242,14 +216,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Lucide** for the beautiful icon set
 - **Pexels** for the stock photography
 - **Framer Motion** for smooth animations
-
-## 📞 Support
-
-If you have any questions or need help with the project:
-
-- Create an issue on GitHub
-- Email: support@skilledge.com
-- Documentation: [Wiki](https://github.com/yourusername/skilledge-lms/wiki)
 
 ## 🗺️ Roadmap
 
@@ -283,3 +249,4 @@ If you have any questions or need help with the project:
 **Built with ❤️ by the ZENITH Team**
 
 _Empowering education through technology_
+```
