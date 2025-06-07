@@ -182,8 +182,6 @@ The application uses comprehensive mock data for demonstration:
 - Progress visualization
 - Quick action buttons
 
-```
-
 The build artifacts will be stored in the `dist/` directory.
 
 ### Deployment Options
@@ -249,4 +247,3 @@ The build artifacts will be stored in the `dist/` directory.
 **Built with ❤️ by the ZENITH Team**
 
 _Empowering education through technology_
-```
