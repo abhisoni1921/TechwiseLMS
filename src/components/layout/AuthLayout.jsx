@@ -24,7 +24,7 @@ export const AuthLayout = () => {
               />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-              SkillEdge
+              TechWise LMS
             </h1>
             <p className="mt-2 text-gray-600 dark:text-gray-400">
               Expand your knowledge with our courses
@@ -51,7 +51,7 @@ export const AuthLayout = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center max-w-lg"
           >
-            <h2 className="text-3xl font-bold mb-4">Welcome to SkillEdge</h2>
+            <h2 className="text-3xl font-bold mb-4">Welcome to TechWise LMS</h2>
             <p className="text-lg mb-6">
               Discover a world of knowledge with our expert-led courses designed
               to help you achieve your goals.

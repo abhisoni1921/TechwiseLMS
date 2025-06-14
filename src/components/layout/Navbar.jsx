@@ -54,7 +54,7 @@ export const Navbar = () => {
             className="flex items-center ml-2"
           >
             <span className="text-xl font-bold text-blue-600 dark:text-blue-400">
-              SkillEdge
+              TechWise LMS
             </span>
           </Link>
         </div>
